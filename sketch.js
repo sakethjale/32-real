@@ -47,7 +47,7 @@ else
 async function getBackgroundImg(){
 
     // write code to fetch time from API
-var respon=await fetch("http://worldtimeapi.org/api/timezone/asia/kolkata");
+var respon=await fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata");
 var responJSON=await respon.json();
 var day=responJSON.datetime;
 
