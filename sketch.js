@@ -6,7 +6,7 @@ const Constraint = Matter.Constraint;
 var engine, world;
 var backgroundImg;
 
-var bg="back.png";
+var bg="sprites/back.png";
 
 function preload() {
     // create getBackgroundImg( ) here
@@ -47,13 +47,13 @@ else
 async function getBackgroundImg(){
 
     // write code to fetch time from API
-var respon=await fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata");
+var respon=await fetch("http://worldtimeapi.org/api/timezone/asia/kolkata");
 var responJSON=await respon.json();
 var day=responJSON.datetime;
 
 
 // write code slice the datetime
-//var hour1=day.slice(14,16)
+
 hour=day.slice(11,13)
 
 console.log(responJSON)
@@ -74,7 +74,7 @@ console.log(responJSON)
     else if(hour>=10&&hour<=12){
         bg="sunrise5.png"
     }
-    else if(hour>=12&&hour<=14){
+    else if(hour>=0&&hour<=14){
         bg="sunrise6.png"
     }
     else if(hour>=14&&hour<=16){
